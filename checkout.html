@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar" id="nav-placeholder"></nav>
+    <div class="container small-container">
+        <h2>Order Details</h2>
+        <form id="checkout-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="tel" placeholder="Mobile Number" required>
+            <textarea placeholder="Delivery Address" required></textarea>
+            <button type="submit" class="btn">Place Order (COD)</button>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('checkout-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Order placed successfully! Bhanu Mobiles will contact you soon.');
+            localStorage.removeItem('cart');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

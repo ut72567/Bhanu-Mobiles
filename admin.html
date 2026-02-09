@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Bhanu Mobiles Admin</h2>
+        <a href="index.html">View Site</a>
+    </nav>
+
+    <div class="admin-container">
+        <section class="admin-section">
+            <h3>Update Shop Logo</h3>
+            <input type="file" id="logo-upload" accept="image/*">
+        </section>
+
+        <section class="admin-section">
+            <h3>Add New Product</h3>
+            <form id="add-product-form">
+                <input type="text" id="p-name" placeholder="Mobile Name" required>
+                <input type="number" id="p-price" placeholder="Price (INR)" required>
+                <textarea id="p-desc" placeholder="Description"></textarea>
+                <input type="file" id="p-image" accept="image/*" required>
+                <button type="submit" class="btn">Add Product</button>
+            </form>
+        </section>
+
+        <section class="admin-section">
+            <h3>Inventory</h3>
+            <table id="admin-product-list">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <script src="js/admin.js"></script>
+</body>
+</html>
